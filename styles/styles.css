@@ -1,3 +1,8 @@
+:root {
+  --primary: #4043ff;
+  --black: #090e18;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -6,6 +11,16 @@ body {
   text-transform: capitalize;
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #0e1b26;
+  border-color: #0e1b26;
 }
 
 .btn-primary:focus {
@@ -18,7 +33,7 @@ body {
 }
 
 .navbar .navbar-brand {
-  color: #090e18;
+  color: var(--black);
   font-weight: bold;
   font-size: 1.125rem;
   display: flex;
@@ -38,19 +53,9 @@ body {
   font-size: 0.875rem;
 }
 
-.navbar .btn-primary {
-  background-color: #4043ff;
-  border-color: #4043ff;
-}
-
-.navbar .btn-primary:hover {
-  background-color: #0e1b26;
-  border-color: #0e1b26;
-}
-
 .navbar .navbar-toggler svg {
   width: 24px;
-  color: #4043ff;
+  color: var(--primary);
 }
 
 .navbar .show-on-md {
@@ -79,7 +84,7 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-  background-color: #4043ff;
+  background-color: var(--primary);
   color: #fff;
 }
 
@@ -97,4 +102,41 @@ body {
   }
 }
 
-/* 0e1b26 */
+/* Hero section */
+.hero-section {
+  min-height: 85vh;
+  text-align: center;
+}
+
+.hero-section .display-5 {
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 34px;
+}
+
+.hero-section .lead {
+  color: #576078;
+  margin-bottom: 59px;
+}
+
+.hero-section .form-control {
+  background-color: #f4f6f8;
+  border: unset;
+  height: 60px;
+}
+
+.hero-section .btn-primary {
+  height: 100%;
+  width: 170px;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section form {
+    gap: 16px;
+  }
+
+  .hero-section .btn-primary {
+    width: 100%;
+  }
+}
