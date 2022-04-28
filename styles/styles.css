@@ -1,1 +1,100 @@
-/* font-family: 'Montserrat', sans-serif; */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(14, 27, 38, 0.5);
+}
+
+/* navbar */
+.navbar {
+  min-height: 80px;
+}
+
+.navbar .navbar-brand {
+  color: #090e18;
+  font-weight: bold;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar .navbar-brand:hover {
+  color: unset;
+}
+
+.navbar .navbar-brand img {
+  width: 32px;
+}
+
+.navbar .nav-link {
+  font-size: 0.875rem;
+}
+
+.navbar .btn-primary {
+  background-color: #4043ff;
+  border-color: #4043ff;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #0e1b26;
+  border-color: #0e1b26;
+}
+
+.navbar .navbar-toggler svg {
+  width: 24px;
+  color: #4043ff;
+}
+
+.navbar .show-on-md {
+  display: none;
+}
+
+.navbar .dropdown-menu {
+  background-color: #0e1b26;
+  position: relative;
+}
+
+.navbar .dropdown-menu::before {
+  content: "";
+  background-color: #0e1b26;
+  height: 16px;
+  width: 16px;
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: 16%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #bdc3ca;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #4043ff;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .hide-on-md {
+    display: none;
+  }
+
+  .navbar .show-on-md {
+    display: unset;
+  }
+
+  .navbar .dropdown-menu::before {
+    left: 3%;
+  }
+}
+
+/* 0e1b26 */
