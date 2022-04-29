@@ -1,6 +1,7 @@
 :root {
   --primary: #4043ff;
   --black: #090e18;
+  --white: #fff;
 }
 
 body {
@@ -23,8 +24,20 @@ body {
   border-color: #0e1b26;
 }
 
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-outline-primary:focus {
   box-shadow: 0 0 0 0.25rem rgba(14, 27, 38, 0.5);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
 }
 
 /* navbar */
@@ -85,7 +98,7 @@ body {
 
 .navbar .dropdown-menu .dropdown-item:hover {
   background-color: var(--primary);
-  color: #fff;
+  color: var(--white);
 }
 
 @media screen and (max-width: 768px) {
@@ -159,7 +172,7 @@ body {
 .hero-featurs-shape .colors-bg .hero {
   height: 50%;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .hero-featurs-shape .colors-bg .features {
@@ -288,7 +301,7 @@ body {
 }
 
 .hero-featurs-shape .shapes-bg .browser .server {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 6px;
   position: absolute;
   right: 3%;
@@ -325,7 +338,7 @@ body {
 .hero-featurs-shape .shapes-bg .browser .server .element .profile .image {
   height: 24px;
   width: 24px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 50%;
 }
 
@@ -405,7 +418,7 @@ body {
 }
 
 .hero-featurs-shape .shapes-bg .browser .server .element .state .on {
-  background-color: #4043ff;
+  background-color: var(--primary);
   width: 24px;
   height: 24px;
   border-radius: 4px;
@@ -413,7 +426,7 @@ body {
 
 .hero-featurs-shape .shapes-bg .browser .server .element.element--active,
 .hero-featurs-shape .shapes-bg .browser .server .element:hover {
-  background-color: #fff;
+  background-color: var(--white);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
   transform: translateX(-10%);
 }
@@ -528,4 +541,87 @@ body {
   width: 20px;
   background-color: #bdc3ca;
   border-radius: 50%;
+}
+
+/* Featurs section */
+.featurs-section {
+  background-color: #e4e7ea;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.featurs-section .section-name {
+  color: var(--primary);
+  font-size: 0.875rem;
+  letter-spacing: 8px;
+  margin-bottom: 41px;
+}
+
+.featurs-section .section-title {
+  color: var(--black);
+  max-width: 500px;
+  margin-bottom: 90px;
+}
+
+.featurs-section .feature-cards .row {
+  gap: 30px;
+}
+
+.featurs-section .feature-cards .feature-card {
+  min-width: 370px;
+  padding: 60px 30px;
+  transition: all 0.15s ease-in-out;
+  border-radius: 14px;
+}
+
+@media screen and (max-width: 576px) {
+  .featurs-section .feature-cards .feature-card {
+    min-width: 100%;
+  }
+}
+
+.featurs-section .feature-cards .card.feature-card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  transform: translateY(-15px);
+}
+
+.featurs-section .feature-cards .feature-card .icon {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid #bdc3ca;
+  margin-bottom: 38px !important;
+}
+
+.featurs-section .feature-cards .feature-card:hover .icon {
+  background-color: #3be4ce;
+  border-color: #3be4ce;
+}
+
+.featurs-section .feature-cards .feature-card .icon svg {
+  width: 30px;
+  color: #576078;
+}
+
+.featurs-section .feature-cards .feature-card:hover .icon svg {
+  width: 30px;
+  color: #fff;
+}
+
+.featurs-section .feature-cards .feature-card .card-title {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.featurs-section .feature-cards .feature-card .card-text {
+  margin-bottom: 24px;
+  color: #576078;
+  font-size: 1rrem;
+}
+
+.featurs-section .feature-cards .feature-card:hover .btn-outline-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
 }
