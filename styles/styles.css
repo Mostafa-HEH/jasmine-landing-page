@@ -40,6 +40,18 @@ body {
   border-color: var(--primary);
 }
 
+.form-control {
+  background-color: #f4f6f8;
+  border: unset;
+  height: 60px;
+}
+
+form .btn-primary {
+  height: 100%;
+  width: 170px;
+  height: 60px;
+}
+
 /* navbar */
 .navbar {
   min-height: 80px;
@@ -130,18 +142,6 @@ body {
 .hero-section .lead {
   color: #576078;
   margin-bottom: 59px;
-}
-
-.hero-section .form-control {
-  background-color: #f4f6f8;
-  border: unset;
-  height: 60px;
-}
-
-.hero-section .btn-primary {
-  height: 100%;
-  width: 170px;
-  height: 60px;
 }
 
 @media screen and (max-width: 768px) {
@@ -624,4 +624,92 @@ body {
   background-color: var(--primary);
   color: var(--white);
   border-color: var(--primary);
+}
+
+/* Descover new */
+.descover-new {
+  position: relative;
+  padding: 46px 0;
+}
+
+.descover-new .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.descover-new .bg .shared-with-featurs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #e4e7ea;
+}
+
+.descover-new .bg .shared-with-reviews {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: var(--black);
+}
+
+.descover-new .frame {
+  position: absolute;
+  right: 11%;
+  top: -2%;
+}
+
+.descover-new .content {
+  position: relative;
+  background-color: var(--primary);
+  min-height: 320px;
+  width: 770px;
+  border-radius: 14px;
+}
+
+@media screen and (max-width: 800px) {
+  .descover-new .content {
+    width: 100%;
+  }
+}
+
+.descover-new .content .section-title {
+  color: var(--white);
+  max-width: 500px;
+  margin-bottom: 35px;
+}
+
+.descover-new .content form {
+  gap: 16px;
+}
+
+.descover-new .content form .btn-primary {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+@media screen and (max-width: 768px) {
+  .descover-new .content form .btn-primary {
+    width: 100%;
+  }
+}
+
+.descover-new .content form .btn-primary:hover {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+
+.descover-new .content form .form-control {
+  background-color: rgb(9, 14, 24, 0.2);
+  color: var(--white);
+}
+
+.descover-new .content form .form-control::placeholder {
+  color: #bdc3ca;
 }
