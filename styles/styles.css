@@ -836,6 +836,12 @@ form .btn-primary {
   padding: 150px 0;
 }
 
+@media screen and (max-width: 480px) {
+  .pricing {
+    overflow: hidden;
+  }
+}
+
 .pricing .nav {
   background-color: #e4e7ea;
   width: 270px;
@@ -1013,3 +1019,63 @@ form .btn-primary {
   border-radius: 50%;
   background-color: #576078;
 }
+
+/* Subscribe section */
+.subscribe {
+  position: relative;
+  padding: 0 16px;
+}
+
+.subscribe .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.subscribe .bg .with-pricing {
+  background-color: var(--white);
+}
+
+.subscribe .bg .with-footer {
+  background-color: #f4f6f8;
+}
+
+.subscribe .container-xxl {
+  background-color: var(--black);
+  position: relative;
+  border-radius: 14px;
+  padding: 112px 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .subscribe .container-xxl {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.subscribe .container-xxl .section-title {
+  color: var(--white);
+  margin-bottom: 0;
+  max-width: unset;
+}
+
+@media screen and (max-width: 1200px) {
+  .subscribe .container-xxl .section-title {
+    margin-bottom: 64px;
+  }
+}
+
+.subscribe input,
+.subscribe input:focus {
+  background-color: #21262f;
+  color: var(--white);
+}
+
+.subscribe form {
+  gap: 32px;
+}
+
+/* 21262f */
