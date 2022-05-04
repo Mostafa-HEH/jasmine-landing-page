@@ -1,6 +1,6 @@
 :root {
   --primary: #4043ff;
-  --black: #090e18;
+  --secondary: #090e18;
   --white: #fff;
 }
 
@@ -60,9 +60,25 @@ form .btn-primary {
 }
 
 .section-title {
-  color: var(--black);
+  color: var(--secondary);
   max-width: 500px;
   margin-bottom: 90px;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
 }
 
 /* navbar */
@@ -70,17 +86,8 @@ form .btn-primary {
   min-height: 80px;
 }
 
-.navbar .navbar-brand {
-  color: var(--black);
-  font-weight: bold;
-  font-size: 1.125rem;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
 .navbar .navbar-brand:hover {
-  color: unset;
+  color: unset !important;
 }
 
 .navbar .navbar-brand img {
@@ -94,10 +101,6 @@ form .btn-primary {
 .navbar .navbar-toggler svg {
   width: 24px;
   color: var(--primary);
-}
-
-.navbar .show-on-md {
-  display: none;
 }
 
 .navbar .dropdown-menu {
@@ -127,12 +130,8 @@ form .btn-primary {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar .hide-on-md {
-    display: none;
-  }
-
   .navbar .show-on-md {
-    display: unset;
+    display: unset !important;
   }
 
   .navbar .dropdown-menu::before {
@@ -143,12 +142,9 @@ form .btn-primary {
 /* Hero section */
 .hero-section {
   min-height: 85vh;
-  text-align: center;
 }
 
 .hero-section .display-5 {
-  font-weight: bold;
-  color: var(--black);
   margin-bottom: 34px;
 }
 
@@ -157,55 +153,24 @@ form .btn-primary {
   margin-bottom: 59px;
 }
 
-@media screen and (max-width: 768px) {
-  .hero-section form {
-    gap: 16px;
-  }
-
-  .hero-section .btn-primary {
-    width: 100%;
-  }
+.hero-section .btn-primary {
+  min-width: 170px;
 }
 
 /* Shape between hero and featurs sections */
 .hero-featurs-shape {
-  position: relative;
   min-height: 600px;
-  width: 100%;
-}
-
-.hero-featurs-shape .colors-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.hero-featurs-shape .colors-bg .hero {
-  height: 50%;
-  width: 100%;
-  background-color: var(--white);
 }
 
 .hero-featurs-shape .colors-bg .features {
-  height: 50%;
-  width: 100%;
   background-color: #e4e7ea;
 }
 
 .hero-featurs-shape .shapes-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 1;
 }
 
 .hero-featurs-shape .shapes-bg .blue {
-  position: absolute;
-  top: 0;
   left: 16%;
 }
 
@@ -222,8 +187,6 @@ form .btn-primary {
 }
 
 .hero-featurs-shape .shapes-bg .green {
-  position: absolute;
-  bottom: 0;
   right: 13%;
 }
 
@@ -247,12 +210,10 @@ form .btn-primary {
 }
 
 .hero-featurs-shape .shapes-bg .dots__dot {
-  border-radius: 50%;
   background-color: #565f77;
 }
 
 .hero-featurs-shape .shapes-bg .dots.top {
-  position: absolute;
   right: 19%;
   top: 9%;
 }
@@ -264,7 +225,6 @@ form .btn-primary {
 }
 
 .hero-featurs-shape .shapes-bg .dots.bottom {
-  position: absolute;
   left: 34%;
   bottom: 7%;
 }
@@ -284,20 +244,11 @@ form .btn-primary {
   width: 770px;
   background-color: #f4f6f8;
   border-radius: 6px;
-  position: relative;
   z-index: 2;
-  overflow: hidden;
 }
 
 .hero-featurs-shape .shapes-bg .browser .bar {
   background-color: #e4e7ea;
-  width: 100%;
-  height: 40px;
-}
-
-.hero-featurs-shape .shapes-bg .browser .bar {
-  background-color: #e4e7ea;
-  width: 100%;
   height: 40px;
 }
 
@@ -310,13 +261,10 @@ form .btn-primary {
   background-color: #bdc3ca;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
 }
 
 .hero-featurs-shape .shapes-bg .browser .server {
-  background-color: var(--white);
   border-radius: 6px;
-  position: absolute;
   right: 3%;
   bottom: 5%;
   top: 13%;
@@ -344,15 +292,10 @@ form .btn-primary {
   }
 }
 
-.hero-featurs-shape .shapes-bg .browser .server .element .profile {
-  gap: 15px;
-}
-
 .hero-featurs-shape .shapes-bg .browser .server .element .profile .image {
   height: 24px;
   width: 24px;
   background-color: var(--white);
-  border-radius: 50%;
 }
 
 .hero-featurs-shape .shapes-bg .browser .server .element .profile .name-bio {
@@ -370,7 +313,6 @@ form .btn-primary {
   background-color: #bdc3ca;
   width: 80px;
   height: 10px;
-  border-radius: 14px;
 }
 
 @media screen and (max-width: 400px) {
@@ -397,7 +339,6 @@ form .btn-primary {
   background-color: #bdc3ca;
   width: 138px;
   height: 10px;
-  border-radius: 14px;
 }
 
 @media screen and (max-width: 400px) {
@@ -507,11 +448,9 @@ form .btn-primary {
 }
 
 .hero-featurs-shape .shapes-bg .browser .user {
-  position: absolute;
   right: 3%;
   bottom: 14%;
   top: 22%;
-  left: 0;
   gap: 5%;
   width: 25%;
 }
@@ -526,7 +465,6 @@ form .btn-primary {
   background-color: #576078;
   height: 60px;
   width: 60px;
-  border-radius: 50%;
   margin-bottom: 20px;
 }
 
@@ -543,6 +481,7 @@ form .btn-primary {
   border-radius: 10px;
   width: 47px;
   height: 10px;
+  margin-top: -16px;
 }
 
 .hero-featurs-shape .shapes-bg .browser .user .taps {
@@ -553,7 +492,6 @@ form .btn-primary {
   height: 20px;
   width: 20px;
   background-color: #bdc3ca;
-  border-radius: 50%;
 }
 
 /* Featurs section */
@@ -571,7 +509,6 @@ form .btn-primary {
   min-width: 370px;
   padding: 60px 30px;
   transition: all 0.15s ease-in-out;
-  border-radius: 14px;
 }
 
 @media screen and (max-width: 576px) {
@@ -588,7 +525,6 @@ form .btn-primary {
 .featurs-section .feature-cards .feature-card .icon {
   height: 70px;
   width: 70px;
-  border-radius: 50%;
   border: 1px solid #bdc3ca;
   margin-bottom: 38px !important;
 }
@@ -610,14 +546,11 @@ form .btn-primary {
 
 .featurs-section .feature-cards .feature-card .card-title {
   margin-bottom: 12px;
-  font-size: 1.5rem;
-  color: var(--black);
 }
 
 .featurs-section .feature-cards .feature-card .card-text {
   margin-bottom: 24px;
   color: #576078;
-  font-size: 1rrem;
 }
 
 .featurs-section .feature-cards .feature-card:hover .btn-outline-primary {
@@ -628,48 +561,21 @@ form .btn-primary {
 
 /* Descover new */
 .descover-new {
-  position: relative;
   padding: 46px 0;
 }
 
-.descover-new .bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 .descover-new .bg .shared-with-featurs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
   background-color: #e4e7ea;
 }
 
-.descover-new .bg .shared-with-reviews {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background-color: var(--black);
-}
-
 .descover-new .frame {
-  position: absolute;
   right: 11%;
   top: -2%;
 }
 
 .descover-new .content {
-  position: relative;
-  background-color: var(--primary);
   min-height: 320px;
   width: 770px;
-  border-radius: 14px;
 }
 
 @media screen and (max-width: 800px) {
@@ -679,18 +585,12 @@ form .btn-primary {
 }
 
 .descover-new .content .section-title {
-  color: var(--white);
   max-width: 500px;
   margin-bottom: 35px;
 }
 
-.descover-new .content form {
-  gap: 16px;
-}
-
 .descover-new .content form .btn-primary {
-  background-color: var(--black);
-  border-color: var(--black);
+  border-color: var(--secondary);
 }
 
 @media screen and (max-width: 768px) {
@@ -700,14 +600,13 @@ form .btn-primary {
 }
 
 .descover-new .content form .btn-primary:hover {
-  background-color: var(--white);
-  border-color: var(--white);
-  color: var(--black);
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+  color: var(--secondary) !important;
 }
 
 .descover-new .content form .form-control {
   background-color: rgb(9, 14, 24, 0.2);
-  color: var(--white);
 }
 
 .descover-new .content form .form-control::placeholder {
@@ -716,12 +615,7 @@ form .btn-primary {
 
 /* Reviews section */
 .reviews {
-  background-color: var(--black);
   padding: 154px 0;
-}
-
-.reviews .section-title {
-  color: var(--white);
 }
 
 .reviews .review {
@@ -729,8 +623,6 @@ form .btn-primary {
   padding: 34px 30px;
   width: 370px;
   transition: all 0.15s ease-in-out;
-  border-radius: 14px;
-  height: auto;
 }
 
 @media screen and (max-width: 576px) {
@@ -777,20 +669,16 @@ form .btn-primary {
 }
 
 .reviews .comment {
-  font-size: 1rem;
-  color: var(--white);
   margin-bottom: 24px;
 }
 
 .reviews .review:hover .comment {
-  color: #576078;
+  color: #576078 !important;
 }
 
 .reviews .profile .image {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
   margin-right: 15px;
 }
 
@@ -800,12 +688,11 @@ form .btn-primary {
 
 .reviews .profile .name-work .name {
   font-size: 0.875rem;
-  color: var(--white);
   margin-bottom: 2px;
 }
 
 .reviews .review:hover .profile .name-work .name {
-  color: var(--black);
+  color: var(--secondary) !important;
 }
 
 .reviews .profile .name-work .work {
@@ -832,7 +719,6 @@ form .btn-primary {
 
 /* Pricing section */
 .pricing {
-  background-color: var(--white);
   padding: 150px 0;
 }
 
@@ -840,6 +726,10 @@ form .btn-primary {
   .pricing {
     overflow: hidden;
   }
+}
+
+.pricing .container-xxl {
+  min-height: 1000px;
 }
 
 .pricing .nav {
@@ -869,11 +759,7 @@ form .btn-primary {
 
 .pricing .card {
   width: 370px;
-  padding: unset;
-  height: 100%;
   transition: all 0.15s ease-in-out;
-  border: unset;
-  position: relative;
   z-index: 3;
 }
 
@@ -904,15 +790,13 @@ form .btn-primary {
 .pricing .card .card-header {
   height: 103px;
   background-color: #e4e7ea;
-  color: var(--black);
   font-size: 0.875rem;
   border-radius: 14px 14px 0 0;
-  border: unset;
 }
 
 .pricing .card:hover .card-header {
   background-color: #3538d1;
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .pricing .card .card-header .price {
@@ -920,32 +804,25 @@ form .btn-primary {
 }
 
 .pricing .card .card-body {
-  background-color: var(--white);
   padding-top: 30px;
   padding-bottom: 30px;
   border: 2px solid #e4e7ea;
-  border-top: unset;
   border-radius: 0 0 14px 14px;
 }
 
 .pricing .card:hover .card-body {
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
   border-radius: 0;
 }
 
 .pricing .card .card-body .card-title {
   font-size: 1.125rem;
   margin: 35px 0;
-  color: var(--black);
 }
 
 .pricing .card:hover .card-body .card-title {
-  color: var(--white);
-}
-
-.pricing .card .card-body .list-group {
-  gap: 14px;
+  color: var(--white) !important;
 }
 
 .pricing .card .card-body .list-group .list-group-item {
@@ -967,7 +844,7 @@ form .btn-primary {
 }
 
 .pricing .card .card-body .list-group .list-group-item.off-package svg {
-  color: var(--black);
+  color: var(--secondary);
 }
 
 .pricing .card .card-body.buttons-body {
@@ -983,14 +860,10 @@ form .btn-primary {
 .pricing .card .card-body .btn-primary {
   height: 40px;
   width: 117px;
-  color: var(--white);
-  background-color: var(--black);
-  border-color: var(--black);
+  border-color: var(--secondary);
 }
 
 .pricing .card .card-body .card-link {
-  color: var(--white);
-  text-decoration: none;
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -1000,7 +873,6 @@ form .btn-primary {
   grid-template-columns: repeat(5, 10px);
   grid-template-rows: repeat(5, 10px);
   gap: 10px;
-  position: absolute;
   z-index: -1;
 }
 
@@ -1016,26 +888,12 @@ form .btn-primary {
 }
 
 .pricing .dots .dots__dot {
-  border-radius: 50%;
   background-color: #576078;
 }
 
 /* Subscribe section */
 .subscribe {
-  position: relative;
   padding: 0 16px;
-}
-
-.subscribe .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.subscribe .bg .with-pricing {
-  background-color: var(--white);
 }
 
 .subscribe .bg .with-footer {
@@ -1043,8 +901,6 @@ form .btn-primary {
 }
 
 .subscribe .container-xxl {
-  background-color: var(--black);
-  position: relative;
   border-radius: 14px;
   padding: 112px 60px;
 }
@@ -1057,7 +913,6 @@ form .btn-primary {
 }
 
 .subscribe .container-xxl .section-title {
-  color: var(--white);
   margin-bottom: 0;
   max-width: unset;
 }
